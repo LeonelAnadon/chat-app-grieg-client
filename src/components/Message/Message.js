@@ -20,7 +20,7 @@ const Message = ({ children, user, name }) => {
 
   return isSendByCurrentUser ? (
     <div className="messageContainer right">
-      <div className="messageInnerContainer">
+      <div className="messageInnerContainer ">
         <span>{capUser}</span>
         <p className="message">{ReactEmoji.emojify(children)}</p>
       </div>

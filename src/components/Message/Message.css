@@ -13,9 +13,11 @@
 
 .right {
   justify-content: flex-end !important;
+  background-color: #efefef;
 }
 .left {
   justify-content: flex-start;
+  background-color: white;
 }
 .admin {
   background-color: transparent !important;
@@ -24,7 +26,7 @@
 
 .messageInnerContainer {
   border: none;
-  background-color: #efefef;
+  /* background-color: #efefef; */
   border-radius: 0.5rem;
   margin: 0.2rem;
   display: block;
@@ -45,7 +47,7 @@
   font-size: 0.9rem;
   margin: 0rem 0.2rem 0.2rem 0.2rem;
   padding: 0 0.6rem 0.3rem 0.6rem;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   white-space: pre-wrap;
-  overflow: hidden; 
+  overflow: hidden;
 }
