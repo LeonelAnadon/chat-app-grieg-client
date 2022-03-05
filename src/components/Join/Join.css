@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Open+Sans:wght@300;500&display=swap');
+
+
+.joinContainer {
+    background-color: rgba(34, 35, 34, 1);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.joinInnerContainer {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    /* border-radius: 1em; */
+}
+.joinInnerContainer > h1 {
+    font-family: 'League Gothic', sans-serif;
+    margin: 2rem 0 0 0;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.divInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.joinInnerContainer .divInput > input {
+    font-family: inherit;
+    border: none;
+    max-width: 10rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.5rem 0 0 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+} 
+.joinInnerContainer .divInput > input:focus {
+    outline: none;
+} 
+
+.divRadio {
+    display: grid;
+    place-content: center;
+    margin: 1.7rem 0 0 0;
+}
+
+.divRadio input[type=radio] {
+
+    position: absolute !important;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+
+.divRadio label {
+    background-color: white;
+    margin: 10px;
+    color: black;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid #F2F2F2;
+    border-radius: 4px;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.divRadio label:hover {
+    cursor: pointer;
+}
+
+.divRadio input[type=radio]:checked + label[for = omegaRoom] {
+    background-color: #BF5E5E;
+    color: white;
+}
+.divRadio input[type=radio]:checked + label[for = sigmaRoom] {
+    background-color: #049DBF;
+    color: white;
+}
+.divRadio input[type=radio]:checked + label[for = betaRoom] {
+    background-color: #343434;
+    color: white;
+}
+
+.joinBtn {
+    display: block;
+    background: white;
+    border: 1px solid #343434;
+    width: 10em;
+    padding: 0.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.joinBtn:active{
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.errorScreen {
+    font-family: 'League Gothic', sans-serif;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: white;
+}
+.errorScreen > h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+}
+.errorScreen  button {
+    font-weight: 700;
+    display: block;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    width: 10em;
+    padding: 0.8rem;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

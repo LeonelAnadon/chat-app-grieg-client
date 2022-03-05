@@ -1,0 +1,38 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chatContainer {
+  background-color: rgba(34, 35, 34, 1);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.chatInnerContainer {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (min-width: 1300px) {
+  .chatInnerContainer {
+    width: 60vw;
+    height: 80vh;
+  }
+}
+
+.chatMessages {
+  padding: 0.2rem;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}

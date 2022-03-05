@@ -1,0 +1,41 @@
+
+.chatInnerContainer > .banner {
+    box-sizing: inherit;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.chatInnerContainer > .banner > h1 {
+    font-size: 1rem;
+    border-bottom: 0.1rem solid #d4d4d4;
+    color: black;
+    box-sizing: inherit;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+    height: max-content;
+}
+.banner > a {
+    color: black;
+    position: absolute;
+    font-size: 2rem;
+    left: 91%;
+    top: 8%;
+    cursor: pointer;
+}
+.banner > span {
+    position: absolute;
+    display: flex;
+    left: 3%;
+    top: 27%;
+    color: rgb(32, 190, 32);
+    cursor: pointer;
+}
+.banner > span > p {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 11% 8%;
+    color: black;
+}

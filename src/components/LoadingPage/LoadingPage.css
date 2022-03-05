@@ -1,0 +1,9 @@
+
+
+.loadingPage {
+    /* background-color: red; */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+

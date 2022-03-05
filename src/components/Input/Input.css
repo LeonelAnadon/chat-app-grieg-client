@@ -1,0 +1,52 @@
+.chatInput {
+    width: 100%;
+    /* height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.2rem 0.4rem 0.2rem;
+    margin: 0.5rem 0.5rem; */
+}
+.chatInput > form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.2rem 0.4rem 0.2rem;
+    margin: 0.5rem 0.5rem;
+}
+.chatInput  input {
+    font-weight: 500;
+    background-color: white;
+    border: none;
+    border: 1px solid #cccccc ;
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: transparent;
+
+    flex-grow: 5;
+    font-size: 1rem; 
+    padding: 0.7rem;
+    /* margin: 0 0.3rem; */
+    transition: all 0.3s ease;
+}
+.chatInput  input:focus {
+    outline: none;
+}
+.chatInput  button {
+    font-weight: bold;
+    background-color: white;
+    color: #3bb1ff;
+    border: 1px solid #cccccc;
+    border-radius: 1rem;
+    border-left:transparent ;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    flex-grow: 1;
+    margin: 0;
+    max-width: 10em;
+    cursor: pointer;
+}
+
