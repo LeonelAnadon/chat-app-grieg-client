@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { Howl, Howler } from "howler";
-import ringtone from "../../assets/ringtone.mp3";
 import "./Chat.css";
 import io from "socket.io-client";
 import Input from "../Input/Input";
@@ -23,7 +21,6 @@ const Chat = () => {
   let navigate = useNavigate();
   let maxMessages = 150;
 
-  console.log(name);
 
   useEffect(() => {
     const { name, room } = {
@@ -49,18 +46,10 @@ const Chat = () => {
 
   useEffect(() => {
     socket.on("message", (message) => {
-      let trimMsg = message.user;
-      console.log(trimMsg);
-      console.log(name.toLowerCase());
 
-      if (trimMsg !== name.toLowerCase()) {
-        let sound = new Howl({
-          src: ringtone,
-          volume: 0.5,
-        });
-        sound.play();
-      }
       setMessages((messages) => [...messages, message]);
+
+
     });
 
     socket.on("roomData", ({ users }) => {
