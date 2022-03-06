@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import {Howl, Howler} from 'howler';
+import ringtone from '../../assets/ringtone.mp3'
 import "./Chat.css";
 import io from "socket.io-client";
 import Input from "../Input/Input";
@@ -45,7 +47,13 @@ const Chat = () => {
 
   useEffect(() => {
     socket.on("message", (message) => {
+      if(message?.user.toLowerCase() !== name.toLowerCase()){
+        soundRingtone()
+        console.log(message.user)
+        console.log(name)
+      }
       setMessages((messages) => [...messages, message]);
+
     });
     // console.log("TRIGGERD");
     socket.on("roomData", ({ users }) => {
@@ -59,6 +67,15 @@ const Chat = () => {
     }
   }, [messages])
 
+
+  
+  const soundRingtone = () => {
+    let sound = new Howl({
+      src: ringtone,
+      volume: 0.5,
+    });
+    sound.play()
+  }
 
   const sendMessage = ({ data, reset }) => {
     if (data.inputChat) {
