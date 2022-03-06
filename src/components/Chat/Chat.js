@@ -53,7 +53,7 @@ const Chat = () => {
       console.log(trimMsg);
       console.log(name.toLowerCase());
 
-      if (trimMsg.toLowerCase() !== name.toLowerCase()) {
+      if (trimMsg !== name.toLowerCase()) {
         let sound = new Howl({
           src: ringtone,
           volume: 0.5,
