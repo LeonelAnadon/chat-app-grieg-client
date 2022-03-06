@@ -25,17 +25,18 @@
 .messageInnerContainer {
   border: none;
   background-color: #efefef;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   margin: 0.2rem;
   display: block;
   max-width: 70%;
 }
 
 .messageInnerContainer > span {
-  font-weight: 500;
+  color: rgba(34, 35, 34, 1);
+  font-weight: 700;
   text-align: left;
   padding: 0.3rem 0.3rem 0 0.6rem;
-  margin: 0 0.2rem;
+  margin: 0.2rem 0.2rem;
   display: block;
   font-size: 0.9rem;
 }
@@ -51,6 +52,6 @@
 }
 .currentUserMsgContainer {
   background-color: white !important;
-  border: 1px solid rgba(180, 180, 180, 0.467);
-  border-radius: 0.5rem;
+  border: 1px solid rgba(206, 206, 206, 0.467);
+  border-radius: 0.9rem;
 }
