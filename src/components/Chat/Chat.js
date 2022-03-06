@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import {Howl, Howler} from 'howler';
-import ringtone from '../../assets/ringtone.mp3'
+import { Howl, Howler } from "howler";
+import ringtone from "../../assets/ringtone.mp3";
 import "./Chat.css";
 import io from "socket.io-client";
 import Input from "../Input/Input";
@@ -22,6 +22,8 @@ const Chat = () => {
   const [activeUsers, setActiveUsers] = useState(false);
   let navigate = useNavigate();
   let maxMessages = 150;
+
+  console.log(name);
 
   useEffect(() => {
     const { name, room } = {
@@ -47,35 +49,30 @@ const Chat = () => {
 
   useEffect(() => {
     socket.on("message", (message) => {
-      if(message?.user.toLowerCase() !== name.toLowerCase()){
-        soundRingtone()
-        console.log(message.user)
-        console.log(name)
+      let trimMsg = message.user;
+      console.log(trimMsg);
+      console.log(name.toLowerCase());
+
+      if (trimMsg.toLowerCase() !== name.toLowerCase()) {
+        let sound = new Howl({
+          src: ringtone,
+          volume: 0.5,
+        });
+        sound.play();
       }
       setMessages((messages) => [...messages, message]);
-
     });
-    // console.log("TRIGGERD");
+
     socket.on("roomData", ({ users }) => {
       setAllUsers(users);
     });
   }, []);
 
   useEffect(() => {
-    if(messages.length === maxMessages){
-      setMessages([])
+    if (messages.length === maxMessages) {
+      setMessages([]);
     }
-  }, [messages])
-
-
-  
-  const soundRingtone = () => {
-    let sound = new Howl({
-      src: ringtone,
-      volume: 0.5,
-    });
-    sound.play()
-  }
+  }, [messages]);
 
   const sendMessage = ({ data, reset }) => {
     if (data.inputChat) {
@@ -87,7 +84,12 @@ const Chat = () => {
 
   return (
     <>
-      <Modal name={name} users={allUsers} setActiveUsers={setActiveUsers} activeUsers={activeUsers} />
+      <Modal
+        name={name}
+        users={allUsers}
+        setActiveUsers={setActiveUsers}
+        activeUsers={activeUsers}
+      />
 
       <div className="chatContainer">
         <div className="chatInnerContainer">
